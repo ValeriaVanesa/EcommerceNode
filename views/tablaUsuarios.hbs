@@ -1,0 +1,107 @@
+
+
+<link rel="stylesheet" href="./css/style3.css">
+
+<body>
+    <header>
+        <div class="fijo">
+           <div class="envios">
+         
+           </div>
+           <br>
+       
+           <h1> <strong>Valmour</strong></h1>
+</header>
+
+
+    <section>
+
+        <div class="registrarse">
+           
+              <a href="/loginAdmin">Login Administrador</a>
+           
+          
+        </div>
+        
+
+        <nav>
+           <div >
+             <ul id="menu-horizontal">
+                <li> <a href="/admin">Inicio</a></li>
+               <li><a href="/formProductos">RegistroProductos</a></li>
+                   <li><a href="/formUsuarios"> Registro Usuarios</a></li>
+                     <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
+                       <li><a href="/listaProductos"> Lista Productos</a></li>
+               
+             </ul>
+            </div> 
+            
+          </nav>
+           <br><br>
+          
+
+
+
+<h2 style="color:mediumturquoise">{{title}}</h2>
+<br><br>
+
+
+<table id="tablaUsuarios" class="table mt-4">
+<thead>
+    <tr>
+        <th style="display:none">ID</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>EMAIL</th>
+       <th>ACCIONES</th>
+
+
+    </tr>
+</thead>
+
+<tbody>
+
+{{#each clientes}}
+
+ <tr>
+      <td style="display:none">ID</td>
+       
+ </tr>
+ <tr>
+     <td>{{nombre}}</td>
+     <td>{{apellido}}</td> 
+      <td>{{email}}</td>
+     <td><form action="/eliminarUsuario/delete" method='POST'>
+     <input type="hidden" id="id" name="id" value="{{_id}}">
+    <button type="submit" class="btn btn-danger">Eliminar</button> 
+    </form></td>
+     <td><form action="/actualizarUsuario/modify" method='POST'>
+     <input type="hidden" id="id" name="id" value="{{_id}}">
+    <button type="submit" class="btn btn-primary">Modificar</button> 
+    </form></td>
+ </tr>
+
+ 
+
+
+
+
+
+
+{{/each}}
+
+
+
+
+
+
+</tbody>
+
+
+
+
+
+
+</table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="./css/style3.css">
+
+
+<body>
+    <header>
+        <div class="fijo">
+           <div class="envios">
+         
+        </div>
+       
+        <h1> <strong>Valmour</strong></h1>
+       </header>
+
+       <section>
+
+           <div class="registrarse">
+              
+             
+               <a href="/loginAdmin">Login Administrador</a>
+               
+           </div>
+           
+         
+           <nav>
+            <div >
+              <ul id="menu-horizontal">
+                  
+                  <li><a href="/formProductos">RegistroProductos</a></li>
+                   <li><a href="/administracionUsuarios"> Registro Usuarios</a></li>
+                     <li><a href="/tablaUsuarios">Tabla Usuarios</a></li>
+                       <li><a href="/listaProductos"> Lista Productos</a></li>
+              </ul>
+             </div> 
+             
+           </nav>
+       </section>
+       
+     
+      <p> 
+        
+        {{ update }}
+
+      </p> 
+<p>
+    {{update._id}}
+</p>
+     
+      
+
+
+
+ <h2 id="tituloTablas" class="text-center" style="color:darkmagenta">formulario de actualización </h2>
+
+<br><br><br>
+
+
+
+
+<div class = 'container'>
+    <div class="chadow-lg pb-3 mb-5 bg-body rounded">
+        <h2 id="datos">Datos</h2>
+<form action="/actualizarUsuario/modifing" method = 'POST'>
+    <input type="hidden" id="id" name="id" value="{{update._id}}">
+  <div class=" col-md-6">
+        <label for="nombre" class="form-label">NOMBRE</label>
+        <input id="nombre" name="nombre" type="text" class="form-control" value= {{ update.nombre }}>
+    </div>
+
+    <div class=" col-md-6">
+        <label for="apellido" class="form-label">APELLIDO</label>
+        <input id="apellido" name="apellido" type="text" class="form-control" value= {{ update.apellido}} >
+    </div>
+  
+    <div class=" col-md-6">
+        <label for="email" class="form-label">EMAIL</label>
+        <input id="email" name="email" type="email" class="form-control" value={{ update.email}} >
+    </div>
+ 
+
+ 
+    
+ 
+</div>
+    <button  type ='submit' class="w-50  btn btn-primary ">Actualizar Usuario</button>
+ <button  type ='reset' class="w-50  btn btn-danger ">eliminar </button>
+
+
+</form>
+  
+
+
+</div>
+   
+
+    </form>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+<br><br><br><br>
